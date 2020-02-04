@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="839.0" prefWidth="1188.0">
+            <children>
+                <ToolBar fx:id="toolBar" layoutY="-4.0" prefHeight="42.0" prefWidth="1188.0">
+                    <items>
+                        <Button fx:id="btnOpenPdf" mnemonicParsing="false" onAction="#chosePath" text="Open PDF" />
+                        <Label text="Page:" />
+                        <Button fx:id="previous" mnemonicParsing="false" onAction="#previousPage" prefHeight="26.0" prefWidth="29.0" text="&lt;">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                        <Button fx:id="next" mnemonicParsing="false" onAction="#nextPage" prefHeight="26.0" prefWidth="31.0" text="&gt;">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                        <TextField fx:id="pageNo" onAction="#jumpPage" prefHeight="26.0" prefWidth="44.0" />
+                        <Label fx:id="lablTotlPages" />
+                        <Label text="Font" />
+
+                  <ComboBox fx:id="font" onAction="#setFont" prefHeight="25.0" prefWidth="64.0" />
+                        <Label text="Find:" />
+                        <TextField fx:id="find" onAction="#findWordDisplay" prefHeight="26.0" prefWidth="89.0" />
+                        <Label prefHeight="17.0" prefWidth="62.0" text="Replace:" />
+                        <TextField fx:id="replace" onAction="#setWord" prefHeight="26.0" prefWidth="91.0" />
+                  <TextField fx:id="addBookmark" onAction="#saveBookmark" prefHeight="26.0" prefWidth="137.0" promptText="Save Bookmark" />
+                  <ComboBox fx:id="selectPdf" onAction="#selectBookmark" prefHeight="26.0" prefWidth="170.0" promptText="Select Bookmark" />
+                  <Button fx:id="mode" mnemonicParsing="false" onAction="#changeMode" prefHeight="26.0" prefWidth="99.0" text="NightMode" />
+                    </items>
+                </ToolBar>
+                <ScrollPane layoutX="209.0" layoutY="95.0" prefHeight="730.0" prefWidth="766.0">
+                    <content>
+                        <TextFlow fx:id="textFlow" prefHeight="728.0" prefWidth="761.0" style="-fx-background-color: White;">
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding></TextFlow>
+                    </content>
+                </ScrollPane>
+            <ToolBar layoutY="38.0" prefHeight="40.0" prefWidth="1188.0">
+              <items>
+                  <Button mnemonicParsing="false" onAction="#setMergePdf" text="Merge PDF" />
+                  <Label text="Find Meaning:" />
+                  <TextField fx:id="txtMeaning" onAction="#findMeaning" />
+                  <Button mnemonicParsing="false" onAction="#editPDF" prefHeight="26.0" prefWidth="89.0" text="Edit" />
+                  <Button mnemonicParsing="false" onAction="#refresh" prefHeight="26.0" prefWidth="102.0" text="Refresh" />
+                  <TextField fx:id="txtEmail" prefHeight="26.0" prefWidth="223.0" promptText="Enter Email" />
+                  <Button fx:id="btnShare" mnemonicParsing="false" onAction="#sendPdf" text="Share" />
+              </items>
+            </ToolBar>
+            </children>
+        </AnchorPane>
+    </children>
+</GridPane>

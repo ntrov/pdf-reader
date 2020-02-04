@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="297.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ErrorPrompt">
+   <children>
+      <Button fx:id="btnOK" layoutX="213.0" layoutY="223.0" mnemonicParsing="false" onAction="#closeWin" prefHeight="26.0" prefWidth="84.0" text="OK" />
+      <ScrollPane layoutX="48.0" layoutY="78.0" prefHeight="136.0" prefWidth="414.0">
+         <content>
+            <TextFlow fx:id="errorMsg" prefHeight="139.0" prefWidth="417.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
