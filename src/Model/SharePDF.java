@@ -62,8 +62,8 @@ public class SharePDF {
     }
 
     public void sendEmail(String file, String toEmail) {
-        final String username = "p176011@nu.edu.pk";
-        final String password = "wajahat.raza777";
+        final String username = "<your email>";
+        final String password = "<your password>";
 
         Properties props = new Properties();
         props.setProperty("mail.transport.protocol", "smtp");
