@@ -85,7 +85,7 @@ public class SharePDF {
         try {
 
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("p176011@nu.edu.pk"));
+            message.setFrom(new InternetAddress("<your email>"));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse(toEmail));
             message.setSubject("Pdf Reader");
@@ -96,7 +96,6 @@ public class SharePDF {
             Multipart multipart = new MimeMultipart();
 
             messageBodyPart = new MimeBodyPart();
-//            String file = "/home/wajahat/IdeaProjects/pdfReaderProject/Assignment 01-FALL 2019.pdf";
             String fileName = "file.pdf";
             DataSource source = new FileDataSource(file);
             messageBodyPart.setDataHandler(new DataHandler(source));
